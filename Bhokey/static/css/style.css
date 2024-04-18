@@ -771,7 +771,7 @@ header.sticky {
 }
 
 .timeline-info {
-    background: ##b0b3b8 none repeat scroll 0 0;
+    background: #b0b3b8 none repeat scroll 0 0;
     display: block;
     line-height: 59px;
     width: 100%;
@@ -1245,7 +1245,7 @@ header.sticky {
     width: 100%;
 }
 
-.activity-meta > h6 a {}
+/* .activity-meta > h6 a {} */
 
 .activitiez > li::before {
     content: "";
@@ -1484,7 +1484,7 @@ form button {
 }
 
 .we-video-info > ul li span.like:hover .we-video-info > ul li span.dislike:hover {
-    trnsform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -4026,7 +4026,7 @@ a.forgot-pwd {
 
 .more-options {
     display: inline-block;
-    float: right;
+    /* float: right; */
     position: relative;
 }
 
@@ -6583,7 +6583,7 @@ a.reply {
     border-radius: 30px;
     color: #333;
     display: inline-block;
-    float: right;
+    /* float: right; */
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -7323,7 +7323,7 @@ ul.offcanvas-menu ul {
     -ms-background-clip: text;
     -o-background-clip: text;
     background-clip: text;
-    text-fill-color: transparent;
+    /* text-fill-color: transparent; */
     margin-right: 10px;
     font-size: 60px;
     vertical-align: middle;
@@ -8513,7 +8513,7 @@ a.shopping-cart > i {
     border: 3px solid #eee;
     width: 124px !important;
     display: inline-block;
-    float: right;
+    /* float: right; */
     cursor: pointer;
 }
 

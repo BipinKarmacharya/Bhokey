@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map Example</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #mapid {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Leaflet Map -->
+    <div id="mapid"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Function to initialize and show the map
+        function initMap(lat, lon) {
+            var map = L.map('mapid').setView([lat, lon], 13); // Default zoom level is 13
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Add marker for the fetched location
+            var marker = L.marker([lat, lon]).addTo(map);
+        }
+
+        // Call initMap with fetched location coordinates
+        window.onload = function() {
+            var location = "{{ location }}"; // Location fetched from the backend
+            var coordinates = location.split(','); // Split coordinates by comma
+            var lat = parseFloat(coordinates[0].trim()); // Latitude
+            var lon = parseFloat(coordinates[1].trim()); // Longitude
+            initMap(lat, lon); // Initialize map with fetched coordinates
+        };
+    </script>
+</body>
+</html>

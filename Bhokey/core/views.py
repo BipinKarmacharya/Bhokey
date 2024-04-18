@@ -8,6 +8,10 @@ from .models import Profile, Post
 
 # Create your views here.
 
+def main(request):
+    posts = Post.objects.all()
+    return render(request, 'main.html', {'posts':posts})
+
 @login_required(login_url='signin')
 def index(request):
     user_object = User.objects.get(username=request.user.username)
@@ -78,7 +82,7 @@ def settings(request):
             user_profile.location = location
             user_profile.save()
 
-        return redirect('settings')
+        return redirect('index')
 
     return render(request, 'setting.html', {'user_profile': user_profile})
 
@@ -128,7 +132,7 @@ def signin(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            return redirect('index')
         else:
             messages.info(request, 'Credentials Invalid')
             return redirect('signin')
