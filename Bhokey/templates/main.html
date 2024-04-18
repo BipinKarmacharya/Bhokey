@@ -20,13 +20,13 @@
       <div class="header_inner">
         <div class="left-side">
           <!-- Logo -->
-          <div id="logo" class="uk-hidden@s">
+          <div id="logo" class="">
             <a href="home.html">
               <b><h1 style="text-transform: uppercase">Bhokey</h1></b>
             </a>
           </div>
 
-          <div class="header_search">
+          <!--<div class="header_search">
             <input type="text" id="locationSearchInput" placeholder="Search for location.." />
             <div class="icon-search">
               <svg
@@ -43,11 +43,11 @@
                 />
               </svg>
             </div>
-          </div>
+          </div>-->
         </div>
         <div class="right-side lg:pr-4">
-          {% comment %} <!-- upload -->
-          <a
+           
+          {% comment %} <a
             href="#"
             class="bg-pink-500 flex font-bold hidden hover:bg-pink-600 hover:text-white inline-block items-center lg:block max-h-10 mr-4 px-4 py-2 rounded shado text-white"
           >
@@ -56,8 +56,9 @@
               class="-mb-1 mr-1 opacity-90 text-xl uilus-circle"
             ></ion-icon>
             Upload Photos
-          </a>
-          <!-- upload dropdown box -->
+          </a> {% endcomment %}
+           <!--upload dropdown box -->
+
           <div
             uk-dropdown="pos: top-right;mode:click ; animation: uk-animation-slide-bottom-small"
             class="header_dropdown"
@@ -129,16 +130,12 @@
             <div class="px-4 py-3 -mx-5 -mb-4 mt-5 border-t text-sm">
               Your image size Must be Maxmium 999MB
             </div>
-          </div> {% endcomment %}
+          </div>
 
           <!-- profile -->
 
           <a href="#">
-            <img
-              src="{{user_profile.profileimg.url}}"
-              class="header-avatar"
-              alt=""
-            />
+            <img src="{{ default_user.png }}" class="header-avatar" alt="">
           </a>
           <div
             uk-drop="mode: click;offset:9"
@@ -184,7 +181,7 @@
                     class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1"
                   ></i>
                 </a>
-                <div
+                {% comment %} <div
                   class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100"
                   uk-drop="mode: hover;pos: top-right"
                 >
@@ -198,7 +195,7 @@
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> {% endcomment %}
               </div>
             </div>
 
@@ -269,7 +266,7 @@
                   href="#"
                   class="border border-gray-200 font-bold px-5 py-1 rounded-full"
                 >
-                  14
+                  8
                 </p>
               </div>
               <div class="flex items-center justify-between py-3">
@@ -290,7 +287,7 @@
                   href="#"
                   class="border border-gray-200 font-bold px-5 py-1 rounded-full"
                 >
-                  11
+                  5
                 </p>
               </div>
               <div class="flex items-center justify-between py-3">
@@ -311,7 +308,7 @@
                   href="#"
                   class="border border-gray-200 font-bold px-5 py-1 rounded-full"
                 >
-                  10
+                  3
                 </p>
               </div>
               <div class="flex items-center justify-between py-3">
@@ -332,7 +329,7 @@
                   href="#"
                   class="border border-gray-200 font-bold px-5 py-1 rounded-full"
                 >
-                  6
+                  1
                 </p>
               </div>
             </div>
